@@ -1,0 +1,25 @@
+<% 
+var colors =["red", "blue", "yellow", "green", "purple"];
+var products =["rubberduck", "hat"];
+%>
+<h1>You want to buy ......</h1>
+<p>
+<%= product %>
+<%= color %>
+</p>
+
+<%
+for (i=0; i<products.length; i++){
+    if (product === products[i]){
+        for(j=0; j<colors.length; j++){
+            if (color === colors[j]){ %>
+                <img src= <%= "../../" + product +color +".jpg"; %> width="500px" >
+
+           <%   console.log("het is gevonden?") 
+            }
+        }
+    }
+}
+
+%>
+
