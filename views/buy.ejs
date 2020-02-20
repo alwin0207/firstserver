@@ -15,7 +15,7 @@ for (i=0; i<products.length; i++){
     if (product === products[i]){
         for(j=0; j<colors.length; j++){
             if (color === colors[j]){ %>
-                <img src= <%= "../../" + product +color +".jpg"; %> width="500px" >
+                <img src= <%= "/" + product +color +".jpg"; %> width="500px" >
 
            <%   console.log("het is gevonden?");
                 found = true;
