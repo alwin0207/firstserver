@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 app.use(express.static('images'));
+app.use(express.static("stylesheets"));
 
 app.get("/",function(req, res){
     res.send("<h1>welcome to this page, i'm an imitator mehehehehe</h1>");

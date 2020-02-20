@@ -1,6 +1,8 @@
+<%- include("partials/header") %>
 <% 
 var colors =["red", "blue", "yellow", "green", "purple"];
 var products =["rubberduck", "hat"];
+var found = false;
 %>
 <h1>You want to buy ......</h1>
 <p>
@@ -15,11 +17,17 @@ for (i=0; i<products.length; i++){
             if (color === colors[j]){ %>
                 <img src= <%= "../../" + product +color +".jpg"; %> width="500px" >
 
-           <%   console.log("het is gevonden?") 
+           <%   console.log("het is gevonden?");
+                found = true;
             }
         }
     }
 }
-
+if(found===false){
 %>
+<img src= <%= "/notfound.jpg"; %> width="500px" >
+<%
+}
+%>
+<%- include("partials/footer") %>
 
